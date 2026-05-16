@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>苏州市电化教育馆 021 岗位手机复习版</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f9;
+      --panel: #ffffff;
+      --text: #17212b;
+      --muted: #5e6b78;
+      --line: #dde3ea;
+      --accent: #1d5fa7;
+      --accent-2: #0b7a75;
+      --warn: #8a4b00;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 14px 12px 28px;
+    }
+    .hero {
+      background: linear-gradient(180deg, #fff, #f9fbff);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      line-height: 1.25;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: 12px 0;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+    }
+    .k {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .v {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .tagrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag {
+      background: #e9f2ff;
+      color: #184f8a;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin: 12px 0;
+      overflow: hidden;
+    }
+    summary {
+      padding: 12px 14px;
+      list-style: none;
+      cursor: pointer;
+      font-weight: 700;
+      border-bottom: 1px solid var(--line);
+    }
+    summary::-webkit-details-marker { display: none; }
+    .summary-count {
+      font-size: 12px;
+      color: var(--muted);
+      margin-left: 6px;
+      font-weight: 600;
+    }
+    .section-body {
+      padding: 12px 14px 14px;
+    }
+    .list {
+      display: grid;
+      gap: 8px;
+      padding: 12px 14px 14px;
+    }
+    .item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      background: #fff;
+    }
+    .item-top {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .item-title {
+      font-weight: 700;
+      min-width: 0;
+      flex: 1;
+    }
+    .item-sub {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .pill {
+      flex: 0 0 auto;
+      font-size: 11px;
+      color: var(--accent-2);
+      background: #e8f6f4;
+      padding: 4px 8px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+    li { margin: 6px 0; }
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .linkbar {
+      display: grid;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .linkbar a {
+      display: block;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+    .stat-n { font-size: 18px; font-weight: 800; color: var(--accent); }
+    .stat-l { color: var(--muted); font-size: 12px; margin-top: 2px; }
+    .quote {
+      border-left: 4px solid var(--accent);
+      background: #f3f8ff;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: #12314f;
+    }
+    @media (max-width: 640px) {
+      .grid, .stats { grid-template-columns: 1fr; }
+      h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <h1>苏州市电化教育馆 021 岗位手机复习版</h1>
+      <div class="sub">生成于 2026-05-16 20:51:31 · 适合手机浏览器直接看</div>
+      <div class="tagrow">
+        <span class="tag">单位代码 115</span>
+        <span class="tag">岗位代码 021</span>
+        <span class="tag">工程师</span>
+        <span class="tag">计算机类</span>
+        <span class="tag">教育信息化工作（人工智能方向）</span>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="k">岗位性质</div><div class="v">专业技术岗</div></div>
+        <div class="card"><div class="k">岗位要求</div><div class="v">硕士及以上</div></div>
+        <div class="card"><div class="k">招聘人数</div><div class="v">1 人</div></div>
+        <div class="card"><div class="k">咨询电话</div><div class="v">0512-65104902</div></div>
+      </div>
+      <div class="quote">
+        这岗要按“计算机工程师 + 教育数字化项目人员 + 人工智能教育应用落地人员”来答。
+      </div>
+    </div>
+
+    <details class="section" open>
+      <summary>面试时先背这 5 条</summary>
+      <div class="section-body">
+        <ul>
+          <li>单位核心是教育信息化、智慧教育、平台建设、数据治理、网络安全。</li>
+          <li>人工智能不是炫技，要落到学生成长、教师减负、学校治理、教育公平。</li>
+          <li>你要会讲平台、会讲数据、会讲安全，也要会讲教育场景。</li>
+          <li>苏州电教馆已转向“苏州市人工智能教育创新中心”方向。</li>
+          <li>回答时多用“支撑、保障、规范、协同、落地、可持续”这类词。</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="section">
+      <summary>单位和官网速记</summary>
+      <div class="section-body">
+        <div class="note">官网：<a href="https://szdjg.suzhou.edu.cn/News.aspx?TypeID=36" target="_blank" rel="noopener">苏州市电化教育馆</a></div>
+        <ul>
+          <li>主要职能：教育信息化规划、基础设施、应用系统、公共服务平台、宣传、培训、评估。</li>
+          <li>重点转向：人工智能教育创新中心、智慧教育大平台、AI 教育应用、数据安全。</li>
+        </ul>
+        <div class="stats"><div class="stat"><div class="stat-n">463</div><div class="stat-l">公告通知</div></div><div class="stat"><div class="stat-n">209</div><div class="stat-l">图文报道</div></div><div class="stat"><div class="stat-n">93</div><div class="stat-l">教育信息化科研</div></div><div class="stat"><div class="stat-n">65</div><div class="stat-l">信息技能评比</div></div><div class="stat"><div class="stat-n">41</div><div class="stat-l">专题报道</div></div><div class="stat"><div class="stat-n">20</div><div class="stat-l">网络通告</div></div><div class="stat"><div class="stat-n">20</div><div class="stat-l">网络活动</div></div><div class="stat"><div class="stat-n">20</div><div class="stat-l">智慧校园</div></div></div>
+      </div>
+    </details>
+
+    <details class="section">
+      <summary>一句话答题模板</summary>
+      <div class="section-body">
+        <div class="quote">
+          我理解这个岗位不是单纯的软件开发岗，而是面向苏州教育系统的教育信息化工程师岗位。它既需要计算机专业能力，也需要把人工智能、大数据、平台运维、网络安全等技术转化为学校可用、教师愿用、学生受益的教育场景。
+        </div>
+      </div>
+    </details>
+
+    <details class="section">
+      <summary>面试重点文章</summary>
+      
+            <details class="section" open>
+              <summary>人工智能与智慧校园 <span class="summary-count">10篇</span></summary>
+              <div class="list">
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1475" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">正式发布！《教师生成式人工智能应用指引（第一版）》来了！</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1475 · 点击 “蓝字” 关注我们 前言 近日，教育部教师队伍建设专家指导委员会正式发布《教师生成式人工智能应用指引（第一版）》，一起来看全文—— 教师生成式人工智能应用指引 （第一版） 为深入学习贯彻…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1623" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关注两会|加强AI时代创新型人才培养，代表委员提出这些建议</span>
+          <span class="pill">专题报道</span>
+        </div>
+        <div class="item-sub">ID 1623 · 数字化是高等教育综合改革的新机遇、新赛道。如何深化人工智能在教育领域的落地应用，培养面向智能时代的创新人才？本期 “两会聚焦” 持续关注 “人工智能赋能教育” ，来听 代表委员们的心声—— 加…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1577" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">在苏州校园邂逅AI ③ | 人工智能+教育，学校课堂全面“升级”！</span>
+          <span class="pill">智慧校园</span>
+        </div>
+        <div class="item-sub">ID 1577 · 随着DeepSeek的出圈爆火 人工智能在教育领域 迅速掀起了一场“智慧风暴” 近日 苏教君推送 “在苏州校园邂逅AI” 系列报道 讲述苏州校园与时俱进的变化 在AI的辅助下 传统课堂焕发出新…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1504" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">在苏州校园邂逅AI ③ | 人工智能+教育，学校课堂全面“升级”！</span>
+          <span class="pill">专题报道</span>
+        </div>
+        <div class="item-sub">ID 1504 · 随着DeepSeek的出圈爆火 人工智能在教育领域 迅速掀起了一场“智慧风暴” 近日 苏教君推送 “在苏州校园邂逅AI” 系列报道 讲述苏州校园与时俱进的变化 在AI的辅助下 传统课堂焕发出新…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1427" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">在苏州校园邂逅AI ③ | 人工智能+教育，学校课堂全面“升级”！</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1427 · 随着DeepSeek的出圈爆火 人工智能在教育领域 迅速掀起了一场“智慧风暴” 近日 苏教君推送 “在苏州校园邂逅AI” 系列报道 讲述苏州校园与时俱进的变化 在AI的辅助下 传统课堂焕发出新…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1426" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">央馆、省馆赴苏州开展教育人工智能专题调研</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1426 · 2月14日下午，教育部教育技术与资源发展中心（中央电化教育馆）、江苏 省教育信息化与数据管理中心（江苏省电化教育馆）领导和专家 赴苏州开展教育人工智能调研，深入了解苏州市 教育 人工智能的推进…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1578" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">在苏州校园邂逅AI ② | 教师数字分身、与李白对话、机器狗巡逻……</span>
+          <span class="pill">智慧校园</span>
+        </div>
+        <div class="item-sub">ID 1578 · 随着DeepSeek的出圈爆火 人工智能在教育领域 迅速掀起了一场“智慧风暴” 近日，苏教君推送 《在苏州校园邂逅AI ① |? 看师生如何在课堂掀起“智慧风暴”》 一文 讲述了苏州校园与时俱…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1428" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">在苏州校园邂逅AI ② | 教师数字分身、与李白对话、机器狗巡逻……</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1428 · 随着DeepSeek的出圈爆火 人工智能在教育领域 迅速掀起了一场“智慧风暴” 近日，苏教君推送 《在苏州校园邂逅AI ① |? 看师生如何在课堂掀起“智慧风暴”》 一文 讲述了苏州校园与时俱…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1503" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">干永春网络名师工作室“智能学伴”项目式人工智能教学现场研讨会在苏州高新区实验小学校顺利举行</span>
+          <span class="pill">专题报道</span>
+        </div>
+        <div class="item-sub">ID 1503 · 点击 “蓝字” 关注我们 2024年12月19日，苏州高新区实验小学校举办了江苏省干永春网络名师工作室“智能学伴——点亮山区孩子的未来之路”人工智能项目式教学现场研讨会。本次活动精心规划了三节…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1416" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">干永春网络名师工作室“智能学伴”项目式人工智能教学现场研讨会在苏州高新区实验小学校顺利举行</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1416 · 点击 “蓝字” 关注我们 2024年12月19日，苏州高新区实验小学校举办了江苏省干永春网络名师工作室“智能学伴——点亮山区孩子的未来之路”人工智能项目式教学现场研讨会。本次活动精心规划了三节…</div>
+      </a>
+    </div>
+            </details>
+            
+            <details class="section" open>
+              <summary>教育数字化平台 <span class="summary-count">10篇</span></summary>
+              <div class="list">
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=407" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">苏州市教育信息化五年行动计划（2013～2017年）</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 407 · 为深入贯彻国家、省和市中长期教育改革发展纲要精神，落实教育部教育信息化十年发展规划和江苏省教育信息化三年行动计划，日前，市政府办公室印发《苏州市发布苏州市教育信息化五年行动计划（2013～20…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1567" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">【国家智慧教育平台应用示范】平台赋能：微教联体架构下基于人工智能的科学素养生长路径</span>
+          <span class="pill">教育信息化科研</span>
+        </div>
+        <div class="item-sub">ID 1567 · 平台赋能：微教联体架构下 基于人工智能的科学素养生长路径 苏州市相城区文征明实验小学 许晨 国家中小学 智慧教育平台 应用案例 摘要： 本案例以国家中小学智慧教育平台为关键支撑，针对小学生科学…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1529" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">【国家智慧教育平台应用示范】平台赋能：微教联体架构下基于人工智能的科学素养生长路径</span>
+          <span class="pill">专题报道</span>
+        </div>
+        <div class="item-sub">ID 1529 · 平台赋能：微教联体架构下 基于人工智能的科学素养生长路径 苏州市相城区文征明实验小学 许晨 国家中小学 智慧教育平台 应用案例 摘要： 本案例以国家中小学智慧教育平台为关键支撑，针对小学生科学…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1482" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">【国家智慧教育平台应用示范】平台赋能：微教联体架构下基于人工智能的科学素养生长路径</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1482 · 平台赋能：微教联体架构下 基于人工智能的科学素养生长路径 苏州市相城区文征明实验小学 许晨 国家中小学 智慧教育平台 应用案例 摘要： 本案例以国家中小学智慧教育平台为关键支撑，针对小学生科学…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1565" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">【国家智慧教育平台应用示范】国家智慧教育平台助推教师专业发展的实践</span>
+          <span class="pill">教育信息化科研</span>
+        </div>
+        <div class="item-sub">ID 1565 · 国家智慧教育平台助推教师专业发展的实践 苏州大学第二实验学校 高乃定? 曹未奇 ?居美虹 国家中小学 智慧教育平台 应用案例 摘要： 教育数字化转型背景下，国家智慧教育平台为教师专业发展提供支…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1527" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">【国家智慧教育平台应用示范】国家智慧教育平台助推教师专业发展的实践</span>
+          <span class="pill">专题报道</span>
+        </div>
+        <div class="item-sub">ID 1527 · 国家智慧教育平台助推教师专业发展的实践 苏州大学第二实验学校 高乃定? 曹未奇 ?居美虹 国家中小学 智慧教育平台 应用案例 摘要： 教育数字化转型背景下，国家智慧教育平台为教师专业发展提供支…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1480" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">【国家智慧教育平台应用示范】国家智慧教育平台助推教师专业发展的实践</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1480 · 国家智慧教育平台助推教师专业发展的实践 苏州大学第二实验学校 高乃定? 曹未奇 ?居美虹 国家中小学 智慧教育平台 应用案例 摘要： 教育数字化转型背景下，国家智慧教育平台为教师专业发展提供支…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1573" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">省级名单揭晓！苏州市智慧教育大平台上榜</span>
+          <span class="pill">智慧校园</span>
+        </div>
+        <div class="item-sub">ID 1573 · 近日 2024年江苏省数字社会重大场景 项目名单公布 确定了 100 个 数字社会重大场景项目 苏州市教育局申报的 苏州市智慧教育大平台 上榜！ ?苏州市智慧教育大平台? 苏州市智慧教育大平台…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1501" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">在教育强国建设中走在前做示范 | 苏州：教育数智化转型的苏州实践</span>
+          <span class="pill">专题报道</span>
+        </div>
+        <div class="item-sub">ID 1501 · 为深入学习贯彻党的二十届三中全会和全国教育大会精神，生动展现江苏在教育强国建设中“走在前、做示范”的探索实践，全面宣传各地各校奋力打造“公平共享、全面多样、开放融合、卓越创新”教育样板示范高地…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1425" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">省级名单揭晓！苏州市智慧教育大平台上榜</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1425 · 近日 2024年江苏省数字社会重大场景 项目名单公布 确定了 100 个 数字社会重大场景项目 苏州市教育局申报的 苏州市智慧教育大平台 上榜！ ?苏州市智慧教育大平台? 苏州市智慧教育大平台…</div>
+      </a>
+    </div>
+            </details>
+            
+            <details class="section" open>
+              <summary>网络与数据安全 <span class="summary-count">10篇</span></summary>
+              <div class="list">
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=439" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">网络安全技术</span>
+          <span class="pill">中心机房</span>
+        </div>
+        <div class="item-sub">ID 439 · 网络安全技术概述 21世纪全世界的计算机都将通过Internet联到一起,信息安全的内涵也就发生了根本的变化.它不仅从一般性的防卫变成了一种非常普通的防范,而且还从一种专门的领域变成了无处不在…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1583" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">@全体师生，2025苏州网络安全宣传周校园日来啦</span>
+          <span class="pill">网络活动</span>
+        </div>
+        <div class="item-sub">ID 1583 · 9月16日 是2025苏州网络安全宣传周校园日 今年的主题是 网络安全为人民，网络安全靠人民 ——以高水平安全守护高质量发展 为进一步增强师生网络安全防范意识 提升识别和应对网络危险的基本能力…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=797" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于进行2017年苏州市学校网络管理员暑期网络安全培训的通知</span>
+          <span class="pill">网络通告</span>
+        </div>
+        <div class="item-sub">ID 797 · 各市、区教育局、苏州市直属学校： 《中华人民共和国网络安全法》（以下简称《网络安全法》）已于 2017 年 6 月 1 日起正式施行。为准确把握《网络安全法》的内容，深刻理解精髓要义，熟知法律…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1588" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">2024年苏州智慧教育示范区直属学校网络安全师培训圆满结束</span>
+          <span class="pill">网络通告</span>
+        </div>
+        <div class="item-sub">ID 1588 · 点击 “蓝字” 关注我们 ?为进一步贯彻落实网络安全法和数据安全法，增强网络安全意识，提升网络安全评估、网络安全部署、网络安全攻防等能力，提高学校基础信息网络和重要信息系统的信息安全保护能力，…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1586" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">2024年苏州智慧教育示范区直属学校网络安全师培训圆满结束</span>
+          <span class="pill">网络活动</span>
+        </div>
+        <div class="item-sub">ID 1586 · 点击 “蓝字” 关注我们 ?为进一步贯彻落实网络安全法和数据安全法，增强网络安全意识，提升网络安全评估、网络安全部署、网络安全攻防等能力，提高学校基础信息网络和重要信息系统的信息安全保护能力，…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1494" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">2024年苏州智慧教育示范区直属学校网络安全师培训圆满结束</span>
+          <span class="pill">信息技能培训</span>
+        </div>
+        <div class="item-sub">ID 1494 · 点击 “蓝字” 关注我们 ?为进一步贯彻落实网络安全法和数据安全法，增强网络安全意识，提升网络安全评估、网络安全部署、网络安全攻防等能力，提高学校基础信息网络和重要信息系统的信息安全保护能力，…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1400" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">2024年苏州智慧教育示范区直属学校网络安全师培训圆满结束</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1400 · 点击 “蓝字” 关注我们 ?为进一步贯彻落实网络安全法和数据安全法，增强网络安全意识，提升网络安全评估、网络安全部署、网络安全攻防等能力，提高学校基础信息网络和重要信息系统的信息安全保护能力，…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=429" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">苏州市教育城域网管理办法</span>
+          <span class="pill">网络通告</span>
+        </div>
+        <div class="item-sub">ID 429 · 第一章 总 则 第一条 为确保教育城域网的正常运行与使用，促进其健康发展，根据《中华人民共和国计算机信息系统安全保护条例》、《中华人民共和国计算机信息网络国际联网管理暂行规定》、《计算机信息网…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1584" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">筑牢网安防线，守护清朗校园——“苏州教育网安2025行动”应急演练总结通报会顺利召开</span>
+          <span class="pill">网络活动</span>
+        </div>
+        <div class="item-sub">ID 1584 · 筑牢网安防线 守护清朗校园 9月19日，苏州市教育局组织召开“苏州教育网安2025行动”应急演练总结通报会，全面复盘演练成果，通报风险隐患，部署下一阶段网络安全重点工作。各县级市（区）电教机构…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1160" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于开展苏州智慧教育示范区首批数据安全师考核认定活动的通知</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1160 · 各县级市 （ 区 ） 教育信息化机构、市教育局各直属 （ 代管 ） 学校 （ 单 位）： 为有效落实国家 “智慧教育示范区”创建任务，提升数据安全 师的数据安全意识、 专业职业技能，确保学校网…</div>
+      </a>
+    </div>
+            </details>
+            
+            <details class="section" open>
+              <summary>中心机房与城域网 <span class="summary-count">8篇</span></summary>
+              <div class="list">
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1103" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于苏州电教馆中心机房及城域网日常运维服务项目的采购公告</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1103 · 苏州诚和招投标咨询有限公司受苏州市电化教育馆的委托，就其所需的苏州电教馆中心机房及城域网日常运维服务项目采购 采用竞争性谈判方式进行采购，欢迎有资格的供应商前来 参加本次谈判采购。 一、采购编…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=441" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">网络身份认证</span>
+          <span class="pill">中心机房</span>
+        </div>
+        <div class="item-sub">ID 441 · 身份认证是在计算机网络中确认操作者身份的过程。身份认证可分为用户与主机间的认证和主机与主机之间的认证，用户与主机之间的认证可以基于如下一个或几个因素：用户所知道的东西：例如口令、密码等，用户拥…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=737" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于苏州市直属学校申请城域网上网认证与IPV6城域网建设（二期）的通知</span>
+          <span class="pill">网络通告</span>
+        </div>
+        <div class="item-sub">ID 737 · 各直属学校： 根据教育部、江苏省《教育信息化“十三五”规划》和《苏州市教育信息化五年行动计划》（2013～2017年）等文件精神。落实下一代互联网(IPV6)应用试点以及国家关于网络安全的要求…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=69" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">中心机房</span>
+          <span class="pill">中心机房</span>
+        </div>
+        <div class="item-sub">ID 69 · 在苏州市财政局的大力支持下，在苏州市教育局领导的关心下，按照“统筹规划、适度超前、分步实施”的建设原则，总投资1148.5万元的苏州市电化教育馆中心机房与2011年12月5日建成并投入使用。整…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=722" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">Portal认证无感知，WLAN接入大不同</span>
+          <span class="pill">网络活动</span>
+        </div>
+        <div class="item-sub">ID 722 · 在Portal无感知认证解决方案中，用户连接WLAN网络SSID，并通过DHCP服务器获取IP地址信息；AC将监控用户的上网流量；当AC监控的用户流量达到阈值时，（例如流量阀值可设置为5分钟累…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1665" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于中心机房及城域网日常运维服务项目的采购公告</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1665 · 苏州华厦招投标代理有限公司受苏州市电化教育馆的委托，对其采购的 中心机房及城域网日常运维服务 项目进行竞争性谈判，欢迎合格的供应商参加采购。 一、采购编号: SZHX2026-Q-T-005 …</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1669" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于中心机房及城域网日常运维服务项目的成交公告</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1669 · 苏州华厦招投标代理有限公司受 苏州市电化教育馆 的委托,就其拟采购的 中心机房及城域网日常运维服务 项目进行了竞争性谈判采购，现就本次采购的成交结果公布如下： 一、项目名称及项目编号： 项目名…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1613" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">苏州教育大数据中心</span>
+          <span class="pill">中心机房</span>
+        </div>
+        <div class="item-sub">ID 1613 · 苏州市电化教育馆中心机房（苏州教育大数据中心）于2011年11月初建成，面积大概为总体面积300平方米左右，其中核心设备区域200平米左右，其余为参观监控区、UPS电池区、气体灭火钢瓶区。 中…</div>
+      </a>
+    </div>
+            </details>
+            
+            <details class="section" open>
+              <summary>教师培训与竞赛 <span class="summary-count">8篇</span></summary>
+              <div class="list">
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=85" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">面向未来教育 培训未来教师</span>
+          <span class="pill">未来教室</span>
+        </div>
+        <div class="item-sub">ID 85 · 随着信息技术的快速发展和教育理论的进步，世界各国越来越多地倡导 ICT 与教室的深度融合，以构建全新的教室学习环境来提高学习质量和效率。多媒体教室及其装备将向全数字化、虚拟化的智慧教室方向发展…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=793" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于组织苏州市直属学校进行未来教室Starc3.0 平台升级及全员培训的通知</span>
+          <span class="pill">未来教室</span>
+        </div>
+        <div class="item-sub">ID 793 · 各直属有关学校： 2013 年 未来教室被列入《苏州市教育信息化五年行动计划》十大工程之一，自 2014 年连续三年被列入苏州市政府实事工程建设项目。目前华中师范大学国家数字化学习工程技术研究…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=70" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于开展“2016年苏州市中小学校优秀校园网站评比”</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 70 · 各市、区电教馆(中心)、教育技术中心（室）、教师发展中心（太仓市、姑苏区）、教研室（吴江区、高新区、工业园区）、各直属学校： 根据江苏省教育管理信息中心、江苏省电化教育馆《关于开展201 6 …</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=792" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于举办2017年StarC云端一体化学习平台应用 种子教师培训班的通知</span>
+          <span class="pill">未来教室</span>
+        </div>
+        <div class="item-sub">ID 792 · 各直属有关学校： 为培养“未来教室应用 ” 种子教师，提升教师信息技术应用能力，根据《关于做好苏州市 2017 年度教师和校长培训工作的通知》（苏教人师〔 2017 〕 7 号）精神，经研究，…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=892" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于2018年度直属学校“未来教室应用”专家型教师 培养对象能力提升培训学员推荐选拔的通知</span>
+          <span class="pill">未来教室</span>
+        </div>
+        <div class="item-sub">ID 892 · 各直属有关学校： 为进一步促进苏州市未来教室环境下信息技术与课堂教学融合的研究和探索，为全市教师信息技术应用能力提升做出示范，根据《关于做好苏州市 2018 年度教师和校长培训工作的通知》（苏…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1499" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">AI赋能教育教学第一期种子教师培训活动圆满完成</span>
+          <span class="pill">信息技能培训</span>
+        </div>
+        <div class="item-sub">ID 1499 · 人工智能技术在教育领域的广泛应用正深刻地改变着传统的教学模式和学习方式。为了提升教师的人工智能素养，培养一批能够熟练运用AI技术进行教学创新的种子教师，推动苏州地区教育数字化的进程，苏州市电化…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1138" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于举办2022年度苏州市智慧教育示范区直属学校网络安全师培训活动的通知</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1138 · 市教育局各直属 （ 代管 ） 学校： 为进一步贯彻落实网络安全法、数据安全法和网络安全工作责任制，加强我市直属学校网络管理员队伍建设，提升全员网络安全意识，提高学校基础信息网络和重要信息系统的…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1150" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于举办 2022 年苏州市智慧教育示范区 “智慧课堂” 专家型教师培养对象能力提升培训的通知</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1150 · 各直属有关学校： 为进一步促进苏州智慧教育示范区市直属学校 “智慧课堂”环境 下信息技术与 课堂教学融合的研究和探索，为全市教师信息技术应用 能力提升做出示范，根 据《关于做好苏州市 2022…</div>
+      </a>
+    </div>
+            </details>
+            
+            <details class="section" open>
+              <summary>教育E卡通 <span class="summary-count">5篇</span></summary>
+              <div class="list">
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1323" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">“苏州教育 E 卡通 ”校园管理办法（暂行）</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 1323 · 第一章 总则 第二章 苏州教育E卡通管理机构设置与职责 第三章 卡的种类、发放对象和主要功能 第四章 卡的使用与管理 第五章 附则 第一章 总则 第一条 为了保证学生、教师和家长在工作、学习和…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=30" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">E卡通 Q&amp;A</span>
+          <span class="pill">E卡通</span>
+        </div>
+        <div class="item-sub">ID 30 · 问：教育 E卡通有哪些功能？ 答：义务教育阶段学生可以持教育 E卡通卡免费乘坐公交车、地铁和有轨电车（需每月增效）。学生凭卡还可以到苏州市图书馆借阅图书、免费参观全市未成年人社会实践体验活动站…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=785" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">关于苏州市教育E卡通-学生卡拟采用单一来源采购方式专家论证意见公示</span>
+          <span class="pill">公告通知</span>
+        </div>
+        <div class="item-sub">ID 785 · 苏州市电化教育馆就其所需的苏州市教育E卡通-学生卡项目组织政府采购。根据本项目的特殊情况及采购人的申请，苏州诚和招投标咨询有限公司于2017年5月11日对其拟采用的单一来源采购方式组织论证，相…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1535" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">@全体新生家长，你们关心的教育E卡通问题都在这</span>
+          <span class="pill">教育E卡通</span>
+        </div>
+        <div class="item-sub">ID 1535 · 教育E卡通新生制卡 高频问题及日常使用问题 解决方法来啦 “苏州教育E卡通”项目是我市探索适应信息时代教育管理模式，提高管理效率和水平的基础工程。项目于2009年立项，2010年被列为市政府实…</div>
+      </a>
+    
+      <a class="item" href="https://szdjg.suzhou.edu.cn/NewsDetail.aspx?ID=1405" target="_blank" rel="noopener">
+        <div class="item-top">
+          <span class="item-title">@全体新生家长，你们关心的教育E卡通问题都在这</span>
+          <span class="pill">图文报道</span>
+        </div>
+        <div class="item-sub">ID 1405 · 教育E卡通新生制卡 高频问题及日常使用问题 解决方法来啦 “苏州教育E卡通”项目是我市探索适应信息时代教育管理模式，提高管理效率和水平的基础工程。项目于2009年立项，2010年被列为市政府实…</div>
+      </a>
+    </div>
+            </details>
+            
+    </details>
+
+    <details class="section">
+      <summary>完整资料入口</summary>
+      <div class="section-body">
+        <div class="linkbar">
+          <a href="面试复习索引.md">打开面试复习索引</a>
+          <a href="articles_index.csv">打开文章总索引</a>
+          <a href="使用说明.md">打开使用说明</a>
+          <a href="苏州电化教育馆021岗位面试资料_对话引用.md">打开对话引用资料</a>
+        </div>
+      </div>
+    </details>
+  </div>
+</body>
+</html>
